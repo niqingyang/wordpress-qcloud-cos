@@ -290,7 +290,7 @@ function cos_read_dir_queue($dir) {
 // 在插件列表页添加设置按钮
 function cos_plugin_action_links($links, $file) {
 	if ($file == plugin_basename(dirname(__FILE__) . '/cos-sync.php')) {
-		$links[] = '<a href="options-general.php?page=' . COS_BASEFOLDER . '/cos-sync.php">' . 设置 . '</a>';
+		array_splice($links, 0, 0, '<a href="options-general.php?page=' . COS_BASEFOLDER . '/cos-sync.php">' . 设置 . '</a>');
 	}
 	return $links;
 }
